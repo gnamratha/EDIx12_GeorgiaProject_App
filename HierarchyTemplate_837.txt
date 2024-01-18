@@ -1,0 +1,35 @@
+BASIC TEMPLATE OF EDI X12 Format for 837
+
+{
+  "Interchange": {
+    "ISA": { /* ISA Segment details */ },
+    "GS": { /* GS Segment details */ }
+  },
+  "FunctionalGroup": {
+    "ST": { /* ST Segment details */ },
+    "BHT": { /* BHT Segment details */ }
+  },
+  "ClaimInformation": {
+    "1000A": { /* Loop 1000A - Submitter Name */ },
+    "1000B": { /* Loop 1000B - Receiver Name */ },
+    "2000A": { /* Loop 2000A - Billing Provider Hierarchical Level */ },
+    "2010AA": { /* Loop 2010AA - Rendering Provider Name */ },
+	- Rendering Provider Details (2310B)
+    "2010AB": { /* Loop 2010AB - Referring Provider Name */ },
+    "2010AC": { /* Loop 2010AC - Service Facility Name */ },
+    "2010BA": { /* Loop 2010BA - Subscriber Name */ },
+    "2300": { /* Loop 2300 - Claim Information */ }
+  },
+  "SubscriberInformation": {
+    "2010BB": { /* Loop 2010BB - Payer Name */ },
+    "2320": { /* Loop 2320 - Other Subscriber Information */ }
+  },
+  "ClaimDetails": {
+    "2400": { /* Loop 2400 - Service Line Information */ }
+  },
+  "Trailer": {
+    "SE": { /* SE Segment details */ },
+    "GE": { /* GE Segment details */ },
+    "IEA": { /* IEA Segment details */ }
+  }
+}
